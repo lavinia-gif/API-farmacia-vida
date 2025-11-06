@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS clientes (
 );
 
 -- Criação da tabela 'medicamentos'
-CREATE TABLE IF NOT EXISTS id_medicamentos (
+CREATE TABLE IF NOT EXISTS medicamentos (
     id_medicamentos SERIAL PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
     lote VARCHAR(50) NOT NULL,
@@ -19,12 +19,12 @@ CREATE TABLE IF NOT EXISTS id_medicamentos (
 -- Criação da tabela 'pedidos'
 CREATE TABLE IF NOT EXISTS pedidos(
     id_pedido SERIAL PRIMARY KEY,
-    id_clientes INT NOT NULL,
+    id_cliente INT NOT NULL,
     id_medicamentos INT NOT NULL,
     data_pedido DATE NOT NULL,
     valor_pedido DECIMAL(10,2) NOT NULL,
     FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente),
-    FOREIGN KEY (id_medicamentos) REFERENCES carros(id_medicamentos)
+    FOREIGN KEY (id_medicamentos) REFERENCES medicamentos(id_medicamentos)
 );
 
 -- Inserts para a tabela 'cliente'

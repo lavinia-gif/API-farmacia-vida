@@ -1,7 +1,7 @@
 import { server } from "./server.js"; // importa o servidor HTTP
-import { DatabaseModel } from "./model/DatabaseModel.js";
+import { DatabaseModel } from "./model/DataBaseModel.js"
 
-const port: number = 3333; // define a porta que o servidor vai executar
+const port: number = 4444; // define a porta que o servidor vai executar
 
 // liga o servidor HTTP
 new DatabaseModel().testeConexao().then((resbd) => {

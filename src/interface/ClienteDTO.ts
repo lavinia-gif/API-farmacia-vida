@@ -4,5 +4,6 @@ export interface ClienteDTO{
      nome: string,
      cpf: string,
      telefone: string,
+     email: string,
      situacao?:boolean
     }
